@@ -1,7 +1,9 @@
 import react from "react";
 import faker from "@faker-js/faker";
 
-const CommentDetail = ()=>{
+const CommentDetail = props=>{
+
+    console.log(props);
 
   return(
 
@@ -10,7 +12,7 @@ const CommentDetail = ()=>{
                 <img src={faker.image.avatar()} alt="Avatar"></img>
             </a>
             <div className="content">
-                <a className="author">{faker.name.firstName()}</a>
+                <a className="author">{props.author}</a>
                 <div className="metadata">
                     <span className="date"> {faker.date.weekday(true)} {faker.time.recent('abbr')}</span>
                 </div>
